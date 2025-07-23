@@ -547,7 +547,7 @@ header .container {
   position: absolute;
   background-color: #fcfcfc;
   min-height: 584px;
-
+  transform: translate(-50%, -50%);
   padding: 72px 24px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
@@ -592,8 +592,6 @@ header .container {
   text-align: center;
   color: #2e2f42;
   margin-bottom: 16px;
-}
-.modal-form {
 }
 .modal-form-wrapper {
   display: flex;
@@ -669,6 +667,7 @@ header .container {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  cursor: pointer;
 }
 .checkbox-accent {
   width: 16px;
@@ -682,23 +681,25 @@ header .container {
   align-items: center;
   justify-content: center;
   fill: transparent;
+  margin-right: 8px;
 }
-.checkbox-icon {
-}
+
 .checkbox-privacy {
   color: #8e8f99;
 }
-.checkbox-privacy:checked + .checkbox-accent {
+.checkbox-privacy:checked + .checkbox-label > .checkbox-accent {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
 }
 .checkbox-link {
   color: #4d5ae5;
+  text-decoration: underline;
 }
 .modal-btn-send {
   border-radius: 4px;
   padding: 16px 32px;
+  margin: 0 auto;
   min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
