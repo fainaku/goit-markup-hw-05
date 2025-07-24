@@ -541,8 +541,7 @@ header .container {
   display: flex;
   gap: 24px;
 }
-.subscribe-label {
-}
+
 .subscribe-input {
   font-weight: 400;
   font-size: 12px;
@@ -579,10 +578,14 @@ header .container {
   text-align: center;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: #404bbf;
 }
 .subscribe-icon {
   fill: #ffffff;
-  margin-left: 16px;
 }
 
 /* region footer end */
@@ -597,13 +600,15 @@ header .container {
   top: 0;
   left: 0;
   z-index: 999;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.is-open {
+  display: flex;
+}
 .modal {
   position: absolute;
   background-color: #fcfcfc;
@@ -654,11 +659,8 @@ header .container {
   color: #2e2f42;
   margin-bottom: 16px;
 }
+
 .modal-form-wrapper {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
   border-radius: 4px;
   width: 360px;
   margin-bottom: 8px;
@@ -764,7 +766,7 @@ header .container {
   min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background: #4d5ae5;
+  background-color: #4d5ae5;
   color: #ffffff;
   border: none;
   display: block;
@@ -775,4 +777,9 @@ header .container {
   letter-spacing: 0.04em;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-btn-send:hover,
+.modal-btn-send:focus {
+  background-color: #404bbf;
+}
+
 /* region backdrop end */
